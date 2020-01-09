@@ -1,0 +1,40 @@
+{
+  "name": "mbsky",
+  "version": "0.0.1",
+  "description": "mbsky",
+  "productName": "mbsky",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "GaoYang <gy148485@163.com>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "dev:ssr": "quasar dev -m ssr",
+    "dev:pwa": "quasar dev -m pwa",
+    "dev:app": "quasar dev -m [android|ios]",
+    "dev:electron": "quasar dev -m electron",
+    "build": "quasar build",
+    "build:ssr": "quasar build -m ssr",
+    "build:pwa": "quasar build -m pwa",
+    "build:app": "quasar build -m [android|ios]",
+    "build:electron": "quasar build -m electron",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "quasar": "^1.0.0",
+    "vue-i18n": "^8.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}
