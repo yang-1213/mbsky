@@ -1,40 +1,36 @@
 {
-  "name": "mbsky",
-  "version": "0.0.1",
-  "description": "mbsky",
-  "productName": "mbsky",
-  "cordovaId": "org.cordova.quasar.app",
-  "capacitorId": "",
-  "author": "GaoYang <gy148485@163.com>",
+  "name": "web",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "dev:ssr": "quasar dev -m ssr",
-    "dev:pwa": "quasar dev -m pwa",
-    "dev:app": "quasar dev -m [android|ios]",
-    "dev:electron": "quasar dev -m electron",
-    "build": "quasar build",
-    "build:ssr": "quasar build -m ssr",
-    "build:pwa": "quasar build -m pwa",
-    "build:app": "quasar build -m [android|ios]",
-    "build:electron": "quasar build -m electron",
-    "test": "echo \"No test specified\" && exit 0"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "axios": "^0.18.1",
-    "quasar": "^1.0.0",
-    "vue-i18n": "^8.0.0"
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "nprogress": "^0.2.0",
+    "view-design": "^4.3.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0"
-  },
-  "engines": {
-    "node": ">= 8.9.0",
-    "npm": ">= 5.6.0",
-    "yarn": ">= 1.6.0"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "style-resources-loader": "^1.3.3",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
-    "last 1 version, not dead, ie >= 11"
+    "> 1%",
+    "last 2 versions",
+    "not dead"
   ]
 }

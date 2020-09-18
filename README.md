@@ -1,23 +1,24 @@
-# mbsky (mbsky)
+# web
 
-## [博客源码参考](https://github.com/surmon-china/surmon.me)
-mbsky
-
-## Install the dependencies
-```bash
+## Project setup
+```
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
+### Compiles and hot-reloads for development
+```
+npm run serve
 ```
 
-
-### Build the app for production
-```bash
-quasar build
+### Compiles and minifies for production
+```
+npm run build
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
