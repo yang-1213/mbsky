@@ -2,7 +2,7 @@
     <div class="home">
         <div class="title">{{ info.title }}</div>
         <div class="title">{{ info.des }}</div>
-        <Input v-model.trim="value" placeholder="请输入参数." clearable style="width: 60%" />
+        <Input v-model.trim="value" placeholder="请输入参数" clearable style="width: 60%" />
         <button @click="submit">发送</button>
     </div>
 </template>
@@ -19,7 +19,9 @@ export default {
         };
     },
     created() {
-        this.info = config[this.id];
+        let info = config[this.id];
+        if (!info) return this.$router.replace({ name: "404" });
+        this.info = info;
     },
     methods: {
         submit() {
