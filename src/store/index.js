@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        apiHost: "",
+        apiHost: "", //工具集api基本路径
     },
     mutations: {
         changeApiHost(state, host) {

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <transition :name="transitionName" mode="out-in">
-            <router-view></router-view>
+            <router-view class="child-view"></router-view>
         </transition>
         <!-- 返回顶部 -->
         <BackTop :height="100" :bottom="150">
@@ -11,9 +11,15 @@
 </template>
 <script>
 export default {
+    created() {
+        // 加载鼠标点击爱心特效
+        this.$nextTick(() => {
+            import("@/assets/js/love.js");
+        });
+    },
     data() {
         return {
-            transitionName: "slide-right",
+            transitionName: "",
         };
     },
     watch: {
@@ -22,12 +28,6 @@ export default {
             const fromDepth = from.path.split("/").length;
             this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
         },
-    },
-    created() {
-        // 加载鼠标点击爱心特效
-        this.$nextTick(() => {
-            import("@/assets/js/love.js");
-        });
     },
 };
 </script>

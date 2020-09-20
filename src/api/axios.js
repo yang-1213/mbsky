@@ -4,7 +4,7 @@ import { Message } from "view-design";
 let $http = axios.create({
     // `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。
     // 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL
-    baseURL: "https://fathomless-scrubland-09364.herokuapp.com",
+    baseURL: "https://fathomless-scrubland-09364.herokuapp.com/api/mxg",
     params: {},
     // `data` 是作为请求主体被发送的数据
     // 只适用于这些请求方法 'PUT', 'POST', 和 'PATCH'
@@ -90,10 +90,15 @@ $http.interceptors.response.use(
             }
             return response.data;
         } else {
+            // 关闭提示
+            Message.destroy();
+            Message.error("网络错误");
             return Promise.reject(response.statusText);
         }
     },
     function(error) {
+        Message.destroy();
+        Message.error("网络错误");
         // 对响应错误做点什么
         return Promise.reject(error);
     }

@@ -1,4 +1,5 @@
 <template>
+    <!-- 404页面-->
     <div class="page404 y-flex">
         <div>
             <div>404</div>
@@ -8,6 +9,7 @@
 </template>
 <script>
 export default {
+    name: "404",
     methods: {
         back() {
             this.$router.replace({ name: "Home" });

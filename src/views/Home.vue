@@ -19,6 +19,7 @@ export default {
 .home {
     h1 {
         cursor: pointer;
+        color: rgb(0, 132, 255);
     }
     min-height: 100vh;
     background-image: url("//gitee.com/yang-1213/images/raw/master/src/20200427004155.jpg");
